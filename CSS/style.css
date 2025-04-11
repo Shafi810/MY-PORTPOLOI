@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    /* border: 1px solid white; */
+}
+
+:root {
+    --green-clr: #dffe02;
+    --gray-clr: #898989;
+    --dark-blue-clr: #171c22;
+}
+
+.bg-green {
+    background: var(--green-clr);
+}
+
+.bg-dark-blue {
+    background: var(--dark-blue-clr);
+}
+
+.text-green {
+    color: var(--green-clr);
+}
+
+.text-gray {
+    color: var(--gray-clr);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar-logo {
+    width: 8.5rem;
+}
+
+.mybtn {
+    border: .1rem solid var(--green-clr) !important;
+    padding: .5rem 1.6rem;
+}
+
+.mybtn:hover {
+      background: transparent;
+      color: var(--green-clr) !important;
+     
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 2.2rem;
+}
+
+.nav-item a {
+    color: white;
+}
+
+.nav-item a:hover {
+    color: var(--dark-blue-clr);
+    background-color: var(--green-clr);
+    transition: 0.85s ease-in-out;
+    border-radius: 10px;
+}
+
+.image-container {
+    
+    width: 32rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border-top: 1rem solid white;
+    border-bottom: 1rem solid white;
+    background-image: url(/images/about\ me\ \(3\).png);
+    background-position: center;
+    background-size: 75%;
+    box-shadow: 0 0 1rem white,
+    inset 0 0 1rem white,
+    0 0 2rem var(--green-clr),
+    inset 0 0 2rem var(--green-clr),
+    0 0 6rem var(--green-clr),
+    inset 0 0 3rem var(--green-clr);
+}
+
+.hero-section {
+   min-height: 88vh;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+p {
+    font-size: .9rem;
+}
+
+.para {
+    max-width: 500px;
+}
+
+.main-txt {
+    letter-spacing: .2rem;
+    font-size: .8rem;
+
+}
+
+.about-me {
+    width: 35rem;
+}
+
+.section-container {
+    padding-block: 4rem;
+}
+
+
+.glow {
+    position: relative;
+}
+
+.animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+  }
+
+  /* Active state for animation when the element is visible */
+  .animate.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+
+
+
+
+.glow:before{
+    content: '';
+    background: var(--green-clr);
+    position: absolute;
+    inset: 4rem;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(70px);
+
+}
+
+.card-hover :hover {
+    background: var(--green-clr);
+}
+
+.card-hover :hover *{
+    color: black !important;
+}
+
+.my-card {
+    width: 21rem;
+}
+
+
+.my-card :hover {
+    transform: scale(1.1);
+    transition: transform .5s;
+}
+
+.blog-card {
+    width: 21rem;
+}
+
+
+form{
+    width: 32rem;
+}
+
+
+.form-control{
+    border: .1rem solid var(--gray-clr);
+}
+
+.form-control{
+    box-shadow: none;
+    border: .1rem solid var(--gray-clr);
+}
+
+#floatingTextarea2 {
+    resize: none;
+    height: 20vh;
+}
+
+.line {
+    background: rgba(255, 255, 255, 0.127);
+    height: .1rem;
+    width: 100%;
+}
+
+
+.profile {
+    width: 3rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev,
+.next {
+    font-size: 1.2rem;
+    padding: .5rem;
+    border-radius: 50%;
+
+}
+
+
+@media  screen and (max-width: 680px){
+    h1 { 
+        font-size: 2.8rem;
+    }
+
+    .image-container { 
+        width: 20rem;
+    }
+
+    .hero-section {
+        height: 72vh;
+    }
+
+    .about-me {
+        width: 23rem;
+    }
+
+    form {
+        width: 25rem;
+    }
+
+}
+@media screen and (max-width: 480px) {
+    .image-container {
+        width: 15rem;
+    }
+    form {
+        width: 20rem;
+    }
+}
